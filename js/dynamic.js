@@ -1,5 +1,11 @@
-var messages = ["May this Christmas season bring you closer to all those that you treasure in your heart. Have a Merry Christmas and a Happy New year!"];
-document.getElementById("message").innerHTML = messages[0];
+var messages = ["May this Christmas season bring you closer to all those that you treasure in your heart. Have a Merry Christmas and a Happy New year!",
+"May the joy of the holiday season fill your heart with warmth and bring you closer to cherished moments. Wishing you a Merry Christmas and a Happy New Year!",
+"May this festive season draw you nearer to the ones you hold dear. Have a joyful Christmas and a prosperous New Year!",
+"May the spirit of Christmas draw you closer to the people who matter most. Wishing you a Merry Christmas and a Happy New Year filled with love and laughter!",
+"May the bonds of love and friendship grow stronger this Christmas. Have a Merry Christmas and a Happy New Year filled with precious moments and shared joy!",
+"May this holiday season bring you closer to the ones who make your heart glow. Wishing you a Merry Christmas and a New Year filled with love, laughter, and lasting memories!"
+];
+document.getElementById("message").innerHTML = messages[Math.floor(Math.random() * messages.length)];
 var queryString = _.chain( location.search.slice( 1 ).split( /&/g ) ).map( function ( item ) { if ( item ) return item.split( /=/ ).map( function ( str ) { return decodeURIComponent( str ); } ); } ).compact().object().value();
 console.log(queryString);
 
